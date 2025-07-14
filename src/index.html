@@ -4,24 +4,129 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css"><!-- do not remove this line! -->
+    <title>Portfolio web de Carolina García</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
+    <header>
+      <div class="menu-header">
+        <ul>
+          <li><a href="index.html">Página principal</a></li>
+          <li><a href="index.html#trabajos">Mis trabajos</a></li>
+          <li><a href="sobre_mi.html">Sobre mí</a></li>
+        </ul>
+      </div>
+    </header>
+    
+    <main>
+      <div class="grid">
+        <div class="foto">
+          <picture>
+            <source srcset="./assets/images/foto-carolina_2000.jpg" media="(min-width: 700px)"> 
+            <source srcset="./assets/images/foto-carolina_1000.jpg" media="(min-width: 500px)">
+            <source srcset="./assets/images/foto-carolina_600.jpg" media= "(max-width: 499px)">
+            <img class="imagen" src="./assets/images/foto-carolina_2000.jpg" width="2000" height="1606" alt="Yo en los Picos de Europa">
+          </picture>
+        </div>
+        
+        <div class="presentacion">
+          <h1>¡Bienvenido a mi portfolio!</h1>
+
+          <p>¡Hola! Yo soy <span class="verde">Carolina García</span>, editora, maquetadora y diseñadora web. Si estás aquí es porque quiero enseñarte los trabajos que he realizado, así que sigue &laquo;scrolleando&raquo; o navega por esta página</p>
+          <p>¡Espero que te guste!</p>
+        </div>
+      </div>
+
+      <div id="trabajos" class="contenedor-texto">
+        <h2>Mis trabajos</h2>
+
+        <p>Este es un repaso a los trabajos de diseño, revisión y maquetación web (entre otros) que he realizado.</p>
+        <p>Los primeros son algunos ejemplos de páginas creadas desde cero como parte de mi formación en el Máster en Diseño de Sitios y Aplicaciones Web por la <abbr title="Universitat Oberta de Catalunya">UOC</abbr>. Los siguientes no son páginas creadas de cero por mí, pero he trabajado en ellas como editora o maquetadora. Por último también podrás encontrar enlaces a otros trabajos míos de diseño, maquetación en papel o redacción SEO.</p>
+
+        <div class="tarjeta">
+          <h3>Página sobre Guardamar del Segura</h3>
+
+          <picture>
+            <source srcset="./assets/images/guardamar_1000.jpg" media="(min-width: 500px)">
+            <source srcset="./assets/images/guardamar_250.jpg" media= "(max-width: 499px)">
+            <img class="imagen" src="./assets/images/guardamar_1000.jpg" width="1000" height="447" alt="Captura de la página de Guardamar">
+          </picture>
+
+          <p>Este fue un proyecto para una asignatura en el que reimaginé la página de Guardamar. La página está hecha de cero por mí, aunque utilicé algunos recursos (sobre todo las fotografías) de webs externas. El logo es el de Turismo de Guardamar, pero rediseñado por mí para que encajara mejor con los colores de la página. La web, como esta misma, es totalmente responsiva y se adapta al tamaño de pantalla del dispositivo.</p>
+          
+          <a href="https://pec1guardamardelsegura.netlify.app/" target="_blank"><button>Página sobre Guardamar</button></a>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Página de recetas (entrada de blog)</h3>
+
+          <p>Esta página es otro proyecto del máster. En esta ocasión es una sola página de entrada de blog sobre una receta. Destaca el uso de herramientas como bibliotecas externas para los iconos. Es una página mucho más simple, pero el logo está creado de cero por mí (no es que sea muy bonito, pero tenía que entregarlo en poco tiempo) y el texto también es 100&nbsp;% propio.</p>
+
+          <button><a href="https://pec1-cocinavegabaja.netlify.app/" target="_blank">Página de recetas de la Vega Baja</a></button>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Página de Jornadas sobre Economía Circular</h3>
+
+          <p>Este proyecto fue para otra asignatura. Si bien el diseño de la página es mucho más simple (y feo), se usan elementos de maquetación más complejos como la maquetación CSS <em>grid</em> y <em>flexbox</em>, además del <em>framework</em> Bootstrap. Se pedía hacer esta misma página dos veces, usando también la biblioteca de utilidades Tailwind y otros métodos de trabajo, pero es absurdo enlazar ambas versiones ya que, básicamente, se ven igual.</p>
+          <p>La página principal no es muy estética, ya que la imagen es sacada de Freepik y no pega demasiado con el resto del diseño, pero era obligatorio usar el <em>grid</em> con una imagen de fondo —como hago al principio de esta misma página, un poco más bonito—. El logo está diseñado por mí basado en una imagen también de Freepik, pero muchas partes del texto y algunas imágenes están hechas por IA. En esta página hay un ejemplo de formulario, pero no es funcional al ser un evento falso.</p>
+
+          <button><a href="https://pec1-cocinavegabaja.netlify.app/"target="_blank">Página de recetas de la Vega Baja</a></button>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Diseño aplicación móvil: Mandarina, tienda de ropa <em>genderless</em></h3>
+
+          <p>Como parte de la asignatura de Diseño UX realicé un proyecto en Figma (sin desarrollar como tal en web) para una aplicación móvil de tienda de moda. En este proyecto no solo hice el diseño, sino que realicé todo un estudio de mercado, tests de prueba a usuarios, entrevistas, etc., consiguiendo un sobresaliente alto en el proyecto.</p>
+          <p>Al no existir un enlace como tal de página, pulsando el primer botón se puede acceder al diagrama de flujo hecho en Figma en el que se explican todos los pasos y se muestran los diseños completos (usando la lupa se puede navegar por la página para ver el diseño en profundidad). Y pulsando el segundo botón se puede acceder a un prototipo navegable por Figma.</p>
+          
+          <button><a href="https://www.figma.com/board/2k0LhBzugeELzrtgTuqnMj/Diagrama-de-flujo?node-id=980-1021&t=Zvbpyw16k4k91cNA-0" target="_blank">Diagrama de flujo de la app móvil Mandarina</a></button>
+          <button><a href="https://www.figma.com/proto/KL2FAkWgdfplRewm29eHEF/PEC3-Carolina-Garc%C3%ADa-Gonz%C3%A1lez?node-id=1-683&p=f&t=NHDSxxv5Exh6DMAB-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A584&starting-point-node-id=1%3A683" target="_blank">Prototipo de la app móvil Mandarina</a></button>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Web nueva del Instituto Cervantes</h3>
+
+          <p>Mientras estuve trabajando en el Instituto Cervantes como parte de una beca de dos años, formé parte del equipo encargado de revisar el proceso de implementación de la nueva web, que se estrenó si no recuerdo mal en octubre de 2023.</p>
+          <p>La web tiene sus más y sus menos, como todas las webs de organismos públicos, pero es cierto que mejora con mucho la anterior, al menos en lo estético. Mi trabajo estuvo muy centrado en la revisión del apartado <a href="https://cervantes.org/es/sobre-nosotros" target="_blank">Sobre nosotros</a> y todas sus subsecciones —que son un montón—, así como mejorar la experiencia de usuario y realizar guías de uso para futuros maquetadores de los artículos de la <a href="https://cervantes.org/es/sobre-nosotros/sala-prensa" target="_blank">Sala de prensa</a>.</p>
+
+          <button><a href="https://cervantes.org/es" target="_blank">Página oficial del Instituto Cervantes</a></button>
+        </div>
+
+        <div class="tarjeta">
+          <h3>Biblioteca fraseológica del <abbr title="Centro Virtual Cervantes">CVC</abbr></h3>
+
+          <p>También como parte de mi beca en el IC realicé muchas maquetaciones web. He seguido trabajando como autónoma para ellos después de finalizar mi beca. A pesar de que no realicé los diseños ni implementé las páginas como tal, ya que es un página muy longeva, sí maqueté al completo muchos libros para los repositorios culturales del centro.</p>
+          <p>En el proyecto que más he trabajado, sin duda, es en la Biblioteca Fraseológica, donde 6 de los libros los he maquetado yo por completo, tanto en formato web navegable, como en ePub, además de hacer toda la revisión ortotipográfica y de estilo.</p>
+          <p>Añado el enlace a la web principal y a la página de índice de uno de los libros subidos por mí.</p>
+
+          <button><a href="https://cvc.cervantes.es/lengua/biblioteca_fraseologica/default.htm" target="_blank">Biblioteca fraseológica y paremiológica</a></button>
+          <button><a href="https://cvc.cervantes.es/lengua/biblioteca_fraseologica/n9_marti/default.htm" target="_blank"><em>Variaciones sobre la fraseología y la paremiología de Julio Casares en su contexto</em></a></button>
+
+        </div>
+
+        <div class="tarjeta">
+          <h3>El español en Europa, <abbr title="Centro Virtual Cervantes">CVC</abbr></h3>
+
+          <p>Otra de las colecciones en las que he trabajado es en El español en Europa. En ella aparte de realizar el diseño de colores de los próximos volúmenes, realicé la maquetación web de <em>Demolingüística del español en Alemania</em> (traducción al alemán), las versiones en español de <em>Demolingüística del español en Suiza. Con un anexo sobre el español en Liechtenstein</em> y <em>Demolingüística del español en Portugal</em>. De estos dos últimos volúmenes también fui la encargada de realizar la maqueta para la imprenta.</p>
+
+          <button><a href="https://cvc.cervantes.es/lengua/espanol_europa/" target="_blank">Colección El español en Europa</a></button>
+          <button><a href="https://cvc.cervantes.es/lengua/espanol_europa/espanol_portugal/default.htm" target="_blank"><em>Demolingüística del español en Portugal</em></a></button>
+
+        </div>
+
+        <div class="tarjeta">
+          <h3>Maquetas de imprenta y diseños</h3>
+
+          <p>Por si fueran de interés, adjunto algunos enlaces de descarga o consulta a proyectos hechos íntegramente por mí, tanto maquetas de imprenta como diseños de libretas o cartelería.</p>
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+
+    </footer>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
