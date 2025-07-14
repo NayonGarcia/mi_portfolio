@@ -186,6 +186,10 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 1.1rem;
+}
+
 .tarjeta {
   margin-top: 4rem;
 }
@@ -210,3 +214,102 @@ button:hover {
   color: #10162c;
 }
 
+footer {
+  background-color: #518ceb;
+  color: white;
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1rem;
+  padding: 2rem;
+  margin-top: 7rem;
+}
+
+footer > p > a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer > p > a:hover {
+  color:#10162c;
+}
+
+@media (min-width: 700px) {
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+.grid_2 {
+  max-width: 100%;
+  height: auto;
+    
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 7rem;
+
+  font-size: 0.85rem;
+}
+
+@media (min-width: 700px) {
+  .grid_2 {
+    display: grid;
+    grid-template-rows: auto auto 10vw;
+    grid-template-columns: 1fr 80vw 1fr; 
+    max-width: 100%;
+    height: auto;
+      
+    padding: 0;
+    margin-bottom: 7rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid_2 {
+    font-size: 1rem;
+    grid-template-columns: 1fr 60vw 1fr; 
+  }
+}
+
+.fondo {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.texto {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 700px) {
+  .texto {
+    position: relative;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+
+    background-color: white;
+    border-radius: 5%;
+  }
+}
+
+@media (min-width: 900px) {
+  .texto {
+    margin-top: 0;
+  }
+}
+
+.espacio {
+  margin-bottom: 5rem;
+}
