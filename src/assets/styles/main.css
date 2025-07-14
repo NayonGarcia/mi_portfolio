@@ -190,14 +190,14 @@ h3 {
   margin-top: 4rem;
 }
 
-.tarjeta > p {
-  margin-top: 3rem;
+.tarjeta > picture > img {
+  margin-bottom: 3rem;
 }
 
 button {
   text-align: center;
   margin-top: 1.5rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
   background-color: #518ceb;
   color: white;
   border: none;
